@@ -21,21 +21,25 @@ request = pc.makeRequestRSpec()
 # Node romeo
 node_romeo = request.XenVM('romeo')
 node_romeo.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD'
+node_romeo.addService(pg.Execute('/bin/sh','bash /local/repository/scripts/no-offload.sh'))
 iface0 = node_romeo.addInterface('interface-1', pg.IPv4Address('10.10.0.100','255.255.255.0'))
 
 # Node juliet
 node_juliet = request.XenVM('juliet')
 node_juliet.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD'
+node_juliet.addService(pg.Execute('/bin/sh','bash /local/repository/scripts/no-offload.sh'))
 iface1 = node_juliet.addInterface('interface-0', pg.IPv4Address('10.10.0.101','255.255.255.0'))
 
 # Node hamlet
 node_hamlet = request.XenVM('hamlet')
 node_hamlet.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD'
+node_hamlet.addService(pg.Execute('/bin/sh','bash /local/repository/scripts/no-offload.sh'))
 iface2 = node_hamlet.addInterface('interface-2', pg.IPv4Address('10.10.0.102','255.255.255.0'))
 
 # Node ophelia
 node_ophelia = request.XenVM('ophelia')
 node_ophelia.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD'
+node_ophelia.addService(pg.Execute('/bin/sh','bash /local/repository/scripts/no-offload.sh'))
 iface3 = node_ophelia.addInterface('interface-3', pg.IPv4Address('10.10.0.103','255.255.255.0'))
 
 # Link link-0
