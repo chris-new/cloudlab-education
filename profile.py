@@ -11,7 +11,7 @@ In this experimental demonstration of the basic operation of a layer 2 switch/br
 
 It should take about 60-120 minutes to run this experiment.
 
-Instructions for running the experiment are at: https://witestlab.poly.edu/blog/basic-ethernet-switch-operation """
+"""
 
 # Import the Portal object.
 import geni.portal as portal
