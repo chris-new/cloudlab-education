@@ -127,27 +127,27 @@ link_2.addInterface(iface6)
 
 # Link link-3
 link_3 = request.Link('link-3')
-iface8.bandwidth = 1000
-iface8.bandwidth = 1000
-link_3.addInterface(iface8)
+iface11.bandwidth = 1000
+iface11.bandwidth = 1000
+link_3.addInterface(iface11)
 iface3.bandwidth = 1000
 iface3.bandwidth = 1000
 link_3.addInterface(iface3)
-iface9.bandwidth = 1000
-iface9.bandwidth = 1000
-link_3.addInterface(iface9)
+iface10.bandwidth = 1000
+iface10.bandwidth = 1000
+link_3.addInterface(iface10)
 
 # Link link-4
 link_4 = request.Link('link-4')
-iface11.bandwidth = 1000
-iface11.bandwidth = 1000
-link_4.addInterface(iface11)
+iface8.bandwidth = 1000
+iface8.bandwidth = 1000
+link_4.addInterface(iface8)
 iface5.bandwidth = 1000
 iface5.bandwidth = 1000
 link_4.addInterface(iface5)
-iface10.bandwidth = 1000
-iface10.bandwidth = 1000
-link_4.addInterface(iface10)
+iface9.bandwidth = 1000
+iface9.bandwidth = 1000
+link_4.addInterface(iface9)
 
 
 # Print the generated rspec
