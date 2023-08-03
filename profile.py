@@ -90,7 +90,7 @@ iface11 = node_othello.addInterface('interface-7', pg.IPv4Address('10.10.2.104',
 
 # Link link-0
 link_0 = request.Link('link-0')
-link_0.disableMACLearning()
+# link_0.disableMACLearning()
 iface1.bandwidth = 1000
 iface1.bandwidth = 1000
 iface1.bandwidth = 1000
@@ -133,7 +133,7 @@ link_2.addInterface(iface8)
 
 # Link link-3
 link_3 = request.Link('link-3')
-link_3.disableMACLearning()
+# link_3.disableMACLearning()
 iface7.bandwidth = 1000
 iface7.bandwidth = 1000
 link_3.addInterface(iface7)
