@@ -22,6 +22,7 @@ request = pc.makeRequestRSpec()
 node_romeo = request.XenVM('romeo')
 node_romeo.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD'
 node_romeo.addService(pg.Execute('/bin/sh','bash /local/repository/scripts/no-offload.sh'))
+node_romeo.addService(pg.Execute('/bin/sh','sudo apt update; sudo apt -y install lynx'))
 iface0 = node_romeo.addInterface('interface-1', pg.IPv4Address('10.10.1.100','255.255.255.0'))
 
 # Node router-int
@@ -42,6 +43,7 @@ iface4 = node_server.addInterface('interface-4', pg.IPv4Address('10.10.2.100','2
 node_vpn = request.XenVM('vpn')
 node_vpn.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD'
 node_vpn.addService(pg.Execute('/bin/sh','bash /local/repository/scripts/no-offload.sh'))
+node_vpn.addService(pg.Execute('/bin/sh','sudo apt update; sudo apt -y install openvpn'))
 iface5 = node_vpn.addInterface('interface-5', pg.IPv4Address('10.10.3.100','255.255.255.0'))
 iface6 = node_vpn.addInterface('interface-8', pg.IPv4Address('10.10.4.100','255.255.255.0'))
 
@@ -56,6 +58,7 @@ iface8 = node_router_ext.addInterface('interface-10', pg.IPv4Address('10.10.5.1'
 node_juliet = request.XenVM('juliet')
 node_juliet.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD'
 node_juliet.addService(pg.Execute('/bin/sh','bash /local/repository/scripts/no-offload.sh'))
+node_juliet.addService(pg.Execute('/bin/sh','sudo apt update; sudo apt -y install openvpn'))
 iface9 = node_juliet.addInterface('interface-9', pg.IPv4Address('10.10.5.100','255.255.255.0'))
 
 # Link link-0
